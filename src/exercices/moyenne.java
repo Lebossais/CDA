@@ -1,13 +1,14 @@
 package exercices;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
-public class moyenne {
+import utilitaires.Input;
 
-	public static void main(String[] args) {
+public class Moyenne {
+
+	public static void start() {
 		
-		Scanner scan = new Scanner(System.in);
+		//Scanner scan = new Scanner(System.in);
 		int a = 0 ;
 		int n = 0 ;
 		int v = 0 ;
@@ -15,22 +16,23 @@ public class moyenne {
 		int [] tab = new int [9] ; 		//Déclaration d'un tableau 1D
 		
 		do {
-		System.out.print("Ecrivez un chiffre:");
-		int x = scan.nextInt() ;
+		Input.print("Ecrivez un chiffre:");
+		int x = Input.nextInt() ;
 		tab[a] = x ;
 		a = a+1 ;
 		} while (a !=9);
 		
 		
-		scan.close() ;
-		System.out.println(Arrays.toString(tab));
+		Input.close() ;
+		Input.print(Arrays.toString(tab));
 		
 		
 		for ( n = 0 ; n < tab.length ; n++) {
 		v = v+tab[n];
 		}
 		v= v / tab.length;
-		System.out.println("La valeur médiane de vos données est " + v +".");
+		Input.print("La valeur médiane de vos données est " + v +".");
+		
 	}
 	
 }

@@ -1,34 +1,33 @@
 package exercices;
 
-import java.util.Scanner;
+import utilitaires.Input;
 
 public class puissance {
 	
-	public static void main(String[] args) {
+	public static void start() {
 		
 		int x ;
 		int y ;
 		int resultat ;
-		Scanner scan = new Scanner(System.in);
 		
 		
-		System.out.print("Saisir la valeur de x");
-		x = scan.nextInt();
-		System.out.print("Saisir la valeur de y");
-		y = scan.nextInt();
+		Input.print("Saisir la valeur de x");
+		x = Input.nextInt();
+		Input.print("Saisir la valeur de y");
+		y = Input.nextInt();
 		
 		
 		if (y == 0) {
-			System.out.println("Le résultat est 1.");
+			Input.print("Le résultat est 1.");
 		}
 		else if (x == 0) {
-			System.out.println("Le résultat est 0.");
+			Input.print("Le résultat est 0.");
 		}
 			else {
 				resultat = (int) (Math.pow(x,y)) ;
-						System.out.println("Le résultat est " + resultat );
+						Input.print("Le résultat est " + resultat );
 			}
-		scan.close();
+		Input.close();
 		}
 	}
 

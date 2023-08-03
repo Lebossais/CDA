@@ -1,18 +1,15 @@
 package exercices;
 
-import java.util.Scanner;
+import utilitaires.Input;
 
 public class Factorielle {
 
 	
 
 
-	public static void main(String[] args) {
-		
-	Scanner scan = new Scanner(System.in);
+	public static void start() {
 	int mat[][] = new int [2][99] ;
 	int indiceColonne = 0 ;
-	int x ;
 		
 	
 	while (indiceColonne < mat[0].length-1) {
@@ -27,11 +24,11 @@ public class Factorielle {
 		indiceColonne=indiceColonne+1 ;
 	}
 
-	System.out.println("Pour quelle valeur souhaitez-vous calculer ?") ;
-	int v = scan.nextInt() ;
+	Input.print("Pour quelle valeur souhaitez-vous calculer ?") ;
+	int v = Input.nextInt() ;
 	
-	System.out.println("La factorielle de "+ v + " est " + mat[1][v-1] + ".") ;
-	scan.close();
+	Input.print("La factorielle de "+ v + " est " + mat[1][v-1] + ".") ;
+	Input.close();
 	
 	}
 	

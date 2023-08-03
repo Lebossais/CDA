@@ -1,6 +1,6 @@
 package exercices;
 
-import java.util.Scanner;
+import utilitaires.Input;
 
 public class Pdt {
 
@@ -9,15 +9,12 @@ public class Pdt {
 	int x; // Sans affectation
 		
 	
- public static void main(String[] args) { 
+ public static void start() { 
 
 	
-	Scanner scan = new Scanner(System.in);
-	
-	System.out.print("saisie un entier : ");
-	int x = scan.nextInt();
+	Input.print("saisie un entier : ");
+	int x = Input.nextInt();
 
-	scan.close();
 	
 	do {
 		aller = x/panier ;
@@ -26,6 +23,6 @@ public class Pdt {
 			}
 	} while (aller == 0) ;
 	
-	System.out.println("Il faudra " + aller + " allers-retours pour aller chercher toutes les pommes de terres.");
+	Input.print("Il faudra " + aller + " allers-retours pour aller chercher toutes les pommes de terres.");
 }
 }

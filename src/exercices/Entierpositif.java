@@ -1,23 +1,23 @@
 package exercices;
 
-import java.util.Scanner;
+
+import utilitaires.Input;
 
 public class Entierpositif {
 		
 	int x ; // Sans affectation
 	int n = 0 ;// Avec affectation
 	
- public static void main(String[] args) { 
+ public static void start() { 
 	
-	Scanner scan = new Scanner(System.in);
-	System.out.print("saisie un entier positif : ");
-	int x = scan.nextInt();
+	 
+	Input.print("saisie un entier positif : ");
+	int x = Input.nextInt();
 
-	scan.close();
 	
 	for (int n = 0; n <= x ; n++) { 		//Initialisation ; Terminaison ; increment) { 
 	 if (n%2<=0) {
-		 System.out.println(n);
+		 Input.print(""+n);
 	 }
 	}
  }

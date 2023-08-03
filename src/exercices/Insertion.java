@@ -1,13 +1,12 @@
 package exercices;
 
 import java.util.Arrays;
-import java.util.Scanner;
+import utilitaires.Input;
 
 public class Insertion {
 
-public static void main(String[] args) {
+public static void start() {
 		
-		Scanner scan = new Scanner(System.in);
 		int a = 0 ;
 		int j = 0 ;
 		int v = 0 ;
@@ -17,14 +16,14 @@ public static void main(String[] args) {
 		int [] tab = new int [9] ; 		//Déclaration d'un tableau 1D
 		
 		do {
-		System.out.print("Ecrivez un chiffre:");
-		int x = scan.nextInt() ;
+		Input.print("Ecrivez un chiffre:");
+		int x = Input.nextInt() ;
 		tab[a] = x ;
 		a = a+1 ;
 		} while (a !=9);
 	
-		scan.close();
-		System.out.println(Arrays.toString(tab));
+		Input.close();
+		Input.print(Arrays.toString(tab));
 		
 		v = tab.length-1 ;
 		
@@ -38,6 +37,6 @@ public static void main(String[] args) {
 			tab[i+1]=k ;
 			j=j+1;			
 		}
-		System.out.println(Arrays.toString(tab));
+		Input.print(Arrays.toString(tab));
 	}
 }

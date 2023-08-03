@@ -1,45 +1,44 @@
 package exercices;
 
 import java.util.Arrays;
-import java.util.Scanner;
+
+import utilitaires.Input;
 
 public class Dichotomique {
 
-	public static void main(String[] args) {
+	public static void start() {
 		
-		Scanner scan = new Scanner(System.in);
 		int a = 0;
 		int position ;
-		int resultat ;
 		int tab[] = new int [10] ; // Doit être préalablement trié
 		
 		
 		do {
-			System.out.print("Ecrivez un chiffre:");
-			int x = scan.nextInt() ;
+			Input.print("Ecrivez un chiffre:");
+			int x = Input.nextInt() ;
 			tab[a] = x ;
 			a = a+1 ;
 			} while (a !=10);
 		
-		System.out.println(Arrays.toString(tab));
+		Input.print(Arrays.toString(tab));
 		
-		System.out.print("Veuillez saisir la valeur à rechercher dans le tableau :");
-		int x1 = scan.nextInt() ;
+		Input.print("Veuillez saisir la valeur à rechercher dans le tableau :");
+		int x1 = Input.nextInt() ;
 		
 		
 		position = recherche(tab, x1) ;
 		if (position == -1) {
-			System.out.println("La valeur recherchée n'est pas dans le tableau");
+			Input.print("La valeur recherchée n'est pas dans le tableau");
 		}
 			else {
-				System.out.println("Votre valeur se trouve à la position " + position + " dans le tableau") ;
+				Input.print("Votre valeur se trouve à la position " + position + " dans le tableau") ;
 		}
 		
-		scan.close();
+		Input.close();
 	}
 	
 	private static int recherche(int[] tab, int x) {
-		Scanner scan = new Scanner(System.in);
+
 		int indiceBas = 0 ;
 		int indiceHaut = tab.length-1 ;
 		int indiceMilieu = (indiceBas+indiceHaut)/2;
