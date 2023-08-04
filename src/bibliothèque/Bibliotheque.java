@@ -18,26 +18,34 @@ public class Bibliotheque {
 			case 0 :
 				Input.print("Réessayer avec une valeur valide.");
 				break ;
+				
 			case 1 :
-				GestionnaireBibliotheque.recherche();
+				Livre.recherche();
+				break ;
+				
 			case 2 :
 				GestionnaireBibliotheque.liste();
-				Input.print("Voici la liste complète des livres :");
+				break ;
 				
 			case 3 :
 				Input.print("Veuillez indiquer les données suivantes : Nom | Auteur | ISBN | Disponible | pour enregistrer votre livre");
-				GestionnaireBibliotheque.ajout() ;
+				Livre.ajout() ;
+				break ;
 				
 			case 4 :
 				Input.print("Quel livre souhaitez-vous emprunter ?");
 				Livre.emprunt();
+				break ;
 				
 			case 5 :
 				Input.print("Quel livre voulez vous rendre ? (ISBN)");
 				Livre.rendre();
+				break ;
 				
 			default :
 				Input.print("Vous ne souhaitez donc rien faire. Au revoir.");
+				break ;
+				
 		}
 	} while (x != 10) ;
 	}

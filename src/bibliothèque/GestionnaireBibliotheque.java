@@ -4,40 +4,30 @@ import utilitaires.Input;
 
 public class GestionnaireBibliotheque {
 
-	public static void ajout() {
-		Livre.ajout();
-		boolean d ;
+	public static Livre ajout() {
+		Livre livre = new Livre () ;
 		
+		Input.nextLine();
 		Input.print("Veuillez indiquer le Nom :") ;
-		String a = Input.nextLine() ;
+		livre.nom = Input.nextLine();
 		
 		Input.print("Veuillez indiquer l'Auteur :");
-		String b = Input.nextLine();
+		livre.auteur = Input.nextLine();
 		
 		Input.print("Veuillez indiquer son numéro ISBN :");
-		int c = Input.nextInt();
+		livre.ISBN = Input.nextInt();
 		
 		Input.print("Veuillez indiquer si vous souhaitez le conserver");
-		d = Input.nextBoolean();
+		Livre.dispo = Input.nextBoolean();
 		
-		String Name = a ;
-		String Author = b ;
-		int ISBN = c ;
+		return livre ;
+		
 	}
 	
-	
-	public static void recherche() {
-		
-		Input.print("Veuillez indiquer quel livre vous chercher :");
-		String v = Input.nextLine() ;
-		for (int i = 0 ; i < tab.length; i++) {
-			for(int j = 0 ; j < tab.length; j++) {
-				
-				Input.print(tab[i][j] + "\t");
-			}
-		}
-	}
 	public static void liste() {
+		
+		Input.print("Voici la liste complète des livre présent dans notre bibliothèque :");
+		Livre.liste() ;
 
 	}
 }
