@@ -8,7 +8,7 @@ public class Bibliotheque {
 	public static void main(String[] args) {
 		
 		int x = 0 ;
-		Input.print("Bienvenue à la Bubliothèque virtuelle");
+		Input.print("Bienvenue à la Bibliothèque virtuelle");
 	do {
 		Input.print("Que souhaitez vous faire au sein de la bibliothèque ?");
 		Input.print("Vous pouvez : \n 1] Rechercher un livre \n 2] Avoir la liste complète des livres \n 3] Ajouter un livre \n 4] Emprunter un livre \n 5] Rendre un livre ");

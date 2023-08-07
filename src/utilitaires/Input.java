@@ -15,6 +15,14 @@ public class Input {
 		System.out.println(string);
 	}
 	
+	public static void printo(char puissance4) {
+		System.out.print(puissance4);
+	}
+	
+	public static void printo(String string) {
+		System.out.print(string);
+	}
+	
 	public static void print(int string) {
 		System.out.println(string);
 	}
@@ -37,5 +45,11 @@ public class Input {
 
 	public static boolean nextBoolean() {
 		return scan.nextBoolean();
+	}
+
+	public static void print(char[][] string) {
+		System.out.println();
+		// TODO Auto-generated method stub
+		
 	}
 	}
