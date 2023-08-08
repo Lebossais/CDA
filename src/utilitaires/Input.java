@@ -2,6 +2,8 @@ package utilitaires;
 
 import java.util.Scanner;
 
+import forum.Utilisateur;
+
 public class Input {
 
 		private static Scanner scan = new Scanner(System.in);
@@ -50,6 +52,12 @@ public class Input {
 	public static void print(char[][] string) {
 		System.out.println();
 		// TODO Auto-generated method stub
+		
+	}
+
+	public static void print(Utilisateur utilisateur) {
+		// TODO Auto-generated method stub
+		System.out.println(utilisateur);
 		
 	}
 	}
