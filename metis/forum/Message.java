@@ -46,16 +46,20 @@ public class Message {
 		Input.print(toString());
 	}
 	
-public static Message main(String[] args) {
+public static void main(String[] args) {
 		
-		Utilisateur Jean = new Utilisateur("Jean", "Dupont", CategorieUtilisateurr.accessibilite.STANDARD);
-		Utilisateur Bernard = new Utilisateur("Bernard", "Morin", CategorieUtilisateurr.accessibilite.STANDARD);
-		Utilisateur Nathalie = new Utilisateur("Nathalie", "Morin", CategorieUtilisateurr.accessibilite.MODERATEUR);
-
+		Message.ajouterUtilisateurMessages();
 		
-		Message message1 = new Message (" Java SE","L'encapsulation est une propriété fondamentale", Jean);
-
-		message1.afficher();
-		return message1 ;
 	}
+public static Message ajouterUtilisateurMessages() {
+	Utilisateur Jean = new Utilisateur("Jean", "Dupont", CategorieUtilisateurr.accessibilite.STANDARD);
+	Utilisateur Bernard = new Utilisateur("Bernard", "Morin", CategorieUtilisateurr.accessibilite.STANDARD);
+	Utilisateur Nathalie = new Utilisateur("Nathalie", "Morin", CategorieUtilisateurr.accessibilite.MODERATEUR);
+
+//	Forum.ajouterUtilisateurMessages();
+	Message message1 = new Message (" Java SE","L'encapsulation est une propriété fondamentale", Jean);
+	
+	message1.afficher();
+	return message1;
+}
 }

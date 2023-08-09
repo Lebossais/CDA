@@ -4,12 +4,12 @@ import utilitaires.Input;
 
 public class Forum {
 
-	Message[] tabMessage= new Message[99];
+	static Message[] tabMessage= new Message[99];
 	
-	public void ajouterUtilisateurMessages(MessageUtilisateur messageutilisteur) {
+	public static void ajouterUtilisateurMessages() {
 		for (int i = 0 ; i <= 20 ; i++) {
 			if (tabMessage[i] == null) {
-				tabMessage[i] = Message.main(null);
+				tabMessage[i] = Message.ajouterUtilisateurMessages() ;
 				break ;
 			}
 			}
