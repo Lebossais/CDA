@@ -1,7 +1,9 @@
 package utilitaires;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import bibliotheque2.Employe;
 import forum.Utilisateur;
 
 public class Input {
@@ -9,6 +11,10 @@ public class Input {
 		private static Scanner scan = new Scanner(System.in);
 		
 
+	public static void print(ArrayList<Employe> employe) {
+			System.out.println(employe);
+		}
+		
 	public static void print(boolean dispo) {
 		System.out.println(dispo);
 	}
