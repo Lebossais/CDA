@@ -12,7 +12,6 @@ public class Voiture extends VehiculeAMoteur {
 		if ( ! getMoteur().isDemarré()) {
 		 getMoteur().demarrer();
 		 }
-		carburant = moteur.utiliser( (int) consommation );
+//		carburant = moteur.utiliser( (int) consommation );
 	}
-	
 }

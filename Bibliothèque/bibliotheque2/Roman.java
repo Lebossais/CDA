@@ -4,49 +4,76 @@ import utilitaires.Input;
 
 public class Roman extends Livre {
 
-	Livre[] tabRoman = new Livre[20] ;
-	
+	static Livre[] tabRoman = new Livre[20];
+
 	public Roman ajout() {
-		
-		for (int i = 0 ; i <= 20 ; i++) {
-			if (tabRoman[i] == null) {
-				tabRoman[i] = ajouter();
-				tabRoman[i] = ajoutisbn();
-				break ;
+
+		for (int i = 0; i <= 20; i++) {
+			if (Roman.tabRoman[i] == null) {
+				Roman.tabRoman[i] = ajouter();
+				Roman.tabRoman[i] = ajoutisbn();
+				break;
 			}
-			}
-		return null ;
 		}
+		return null;
+	}
 
 	public void liste() {
-		
-		for (int m = 0 ; m <= 19 ; m++) {
-			if (tabRoman[m] != null) {
-				
-			Input.print(tabRoman[m].nom);
-			Input.print(tabRoman[m].auteur);
-			Input.print(tabRoman[m].isbn);
-			Input.print(tabRoman[m].dispo);
-			Input.print("---------------");
+		Input.print("Voici la liste complète des Romans.");
+		Input.print("+------+------------+-------------------+--------------------+");
+		Input.print("| Nom  | Auteur     | Numéro ISBN       | Disponibilité      |");
+		Input.print("+------+------------+-------------------+--------------------+");
+
+		for (int m = 0; m <= 19; m++) {
+			if (Roman.tabRoman[m] != null) {
+				// | %c | %, 10d | %tF %tf | %-20s|\n",
+				Input.print(Roman.tabRoman[m].nom + " | " + Roman.tabRoman[m].auteur + " | " + Roman.tabRoman[m].isbn
+						+ " | " + Roman.tabRoman[m].dispo);
 			}
 		}
+		Input.print("+------+------------+-------------------+--------------------+");
 	}
-		
-	public void recherche() {
-	
 
-	Input.nextLine();
-	Input.print("Veuillez indiquer quel livre vous chercher :");
-	String src = Input.nextLine(); 
-			for (int o = 0 ; o <= 19 ; o++) {
-				if (tabRoman[o] == null) {
-					d = false ;
+	public boolean recherche(String src) {
+		boolean i = false;
+		for (int o = 0; o <= 19; o++) {
+			if (Roman.tabRoman[o] == null) {
+				i = false;
+			} else if (Roman.tabRoman[o].nom.equals(src)) {
+				i = true;
+				break;
 			}
-			else if (tabRoman[o].nom.matches(src)){
-				d = true ;
-				break ;
+		}
+		return super.recherche(src, i);
+	}
+
+	public boolean emprunt(String src1) {
+		boolean d = false;
+		for (int o = 0; o <= 19; o++) {
+			if (Roman.tabRoman[o] == null && d == false) {
+				d = false;
+			} else if (Roman.tabRoman[o].nom.equals(src1) && Roman.tabRoman[o].dispo == true) {
+				d = true;
+				Roman.tabRoman[o].dispo = false;
+				break;
 			}
-				
+		}
+		return super.emprunt(src1, d);
 	}
+
+	public boolean rendre(String src2) {
+		boolean a = false;
+		for (int o = 0; o <= 19; o++) {
+			if (Roman.tabRoman[o] == null && a == false) {
+				a = false;
+			} else if (Roman.tabRoman[o].collection == src2 && Roman.tabRoman[o].dispo == false) { // passez la valeur
+																									// en true
+				a = true;
+				Roman.tabRoman[o].dispo = true;
+				break;
+			}
+		}
+		return super.rendre(src2, a);
 	}
+
 }

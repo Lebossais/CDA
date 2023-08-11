@@ -66,4 +66,9 @@ public class Input {
 		System.out.println(utilisateur);
 		
 	}
+
+	public static void print(String string, String nom, String auteur, int isbn, boolean dispo) {
+		// TODO Auto-generated method stub
+		
+	}
 	}
