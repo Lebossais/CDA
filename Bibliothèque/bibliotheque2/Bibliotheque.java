@@ -35,13 +35,13 @@ public class Bibliotheque {
 				Input.nextLine();
 				Input.print("Veuillez indiquer quel livre vous chercher :");
 				String src = Input.nextLine();
-				roman.recherche(src);
+				i = roman.rechercher(src);
 				if (i == false) {
 					Input.print("Ce livre n'est pas dans notre section ROMAN");
 				} else if (i == true) {
 					Input.print("Le livre " + src + " est dans notre bibliothèque à la section ROMAN.");
 				}
-				bd.recherche(src);
+				i = bd.rechercher(src);
 				if (i == false) {
 					Input.print("Ce livre n'est pas dans notre section BD.");
 				} else if (i == true) {
@@ -73,17 +73,17 @@ public class Bibliotheque {
 				Input.nextLine();
 				Input.print("Indiquer le nom s'il vous plaît.");
 				String src1 = Input.nextLine();
-				roman.emprunt(src1);
+				d = roman.emprunt(src1);
 				if (d == false) {
 					Input.print("Le livre que vous recherchez n'est pas au sein de la section ROMAN.");
 				} else if (d == true) {
-					Input.print("Vous prenez le livre " + src1 + ". Pensez à le rendre dans 3semaines !");
+					Input.print("Vous prenez le livre " + src1 + " dans la section ROMAN. Pensez à le rendre dans 3semaines !");
 				}
-				bd.emprunt(src1);
+				d = bd.emprunt(src1);
 				if (d == false) {
 					Input.print("Le livre que vous recherchez n'est pas au sein de la section BD.");
 				} else if (d == true) {
-					Input.print("Vous prenez le livre " + src1 + ". Pensez à le rendre dans 3semaines !");
+					Input.print("Vous prenez le livre " + src1 + " dans la section BD. Pensez à le rendre dans 3semaines !");
 				}
 				break;
 
@@ -91,17 +91,17 @@ public class Bibliotheque {
 				Input.nextLine();
 				Input.print("Indiquer le N° ISBN ou la Collection s'il vous plaît.");
 				String src2 = Input.nextLine();
-				roman.rendre(src2);
+				a = roman.rendre(src2);
 				if (a == false) {
 					Input.print("Le livre que vous recherchez n'est pas au sein de la section ROMAN.");
 				} else if (a == true) {
-					Input.print("Vous prenez le livre " + src2 + ". Pensez à le rendre dans 3semaines !");
+					Input.print("Vous rendez le livre " + src2 + " de la section ROMAN. Merci à vous !");
 				}
-				bd.rendre(src2);
+				a = bd.rendre(src2);
 				if (a == false) {
 					Input.print("Le livre que vous recherchez n'est pas au sein de la section ROMAN.");
 				} else if (a == true) {
-					Input.print("Vous prenez le livre " + src2 + ". Pensez à le rendre dans 3semaines !");
+					Input.print("Vous prenez le livre " + src2 + " de la section BD. Merci à vous !");
 				}
 				break;
 

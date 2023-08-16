@@ -34,7 +34,7 @@ public class Roman extends Livre {
 		Input.print("+------+------------+-------------------+--------------------+");
 	}
 
-	public boolean recherche(String src) {
+	public boolean rechercher(String src) {
 		boolean i = false;
 		for (int o = 0; o <= 19; o++) {
 			if (Roman.tabRoman[o] == null) {
@@ -66,7 +66,7 @@ public class Roman extends Livre {
 		for (int o = 0; o <= 19; o++) {
 			if (Roman.tabRoman[o] == null && a == false) {
 				a = false;
-			} else if (Roman.tabRoman[o].collection == src2 && Roman.tabRoman[o].dispo == false) { // passez la valeur
+			} else if (Roman.tabRoman[o].isbn == src2 && Roman.tabRoman[o].dispo == false) { // passez la valeur
 																									// en true
 				a = true;
 				Roman.tabRoman[o].dispo = true;

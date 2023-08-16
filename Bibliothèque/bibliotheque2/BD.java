@@ -33,7 +33,7 @@ public class BD extends Livre {
 		Input.print("+------+------------+-------------------+--------------------+");
 	}
 
-	public boolean recherche(String src) {
+	public boolean rechercher(String src) {
 		boolean i = false;
 		for (int o = 0; o <= 19; o++) {
 			if (BD.tabBD[o] == null) {
