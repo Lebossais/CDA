@@ -26,7 +26,6 @@ public class Employe {
 	static ArrayList<Employe> employe = new ArrayList<Employe>();
 
 	public Employe(String prenom, String nom, String matricule) {
-		super();
 		this.prenom = prenom;
 		this.nom = nom;
 		this.matricule = matricule;
