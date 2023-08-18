@@ -7,7 +7,7 @@ public class Elus {
 
 	String nom, prenom;
 	int compteBancaire; // montant de son compte en euros
-	int nbrAssistant;
+	int nbrAssistant = 0;
 	
 	
 	
@@ -28,6 +28,7 @@ public class Elus {
 
 		Assistant assistant = new Assistant(prenom, nom);
 		assistant.embaucher();
+		nbrAssistant = nbrAssistant + 1;
 		
 	}
 	
