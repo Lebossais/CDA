@@ -266,7 +266,6 @@ public class Calculatrice_Swing {
 		console.setHorizontalAlignment(SwingConstants.RIGHT);
 		console.setColumns(25);
 		console.addKeyListener(new KeyAdapter() {
-			 
 	            public void keyTyped(KeyEvent keyevent) {
 	                char c = keyevent.getKeyChar();
 	                if (c >= '0' && c <= '9') {

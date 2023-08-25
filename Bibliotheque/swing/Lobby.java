@@ -154,7 +154,7 @@ public class Lobby {
 	}
 	public void liste(ActionEvent e) {
 		Liste liste = new Liste();
-		liste.frmListe.setVisible(true);
+		liste.setVisible(true);
 		
 	}
 
