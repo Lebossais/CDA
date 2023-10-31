@@ -135,7 +135,7 @@ public class Lobby {
 		mnNewMenu_2.add(mntmNewMenuItem_2);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(Lobby.class.getResource("/swing/bank/bibli.jpg")));
+		lblNewLabel.setIcon(new ImageIcon(Lobby.class.getResource("/Configuration/bank/bibli.jpg")));
 		lobby.getContentPane().add(lblNewLabel, BorderLayout.CENTER);
 	}
 	
